@@ -7,15 +7,51 @@
     <title>VanillaJS SWAPI</title>
 </head>
 <body>
-    <h1>VanillaJS SWAPI</h1>
-    <button>Click me</button>
+    <header>
+        <h1>VanillaJS SWAPI</h1>
+    </header>
+   <main>
+       <div class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minus veritatis maxime, porro itaque rerum fugiat obcaecati? Possimus, sunt aut suscipit aliquam quaerat maxime minima quasi velit tempore, veritatis repellat?</div>
+       <div class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minus veritatis maxime, porro itaque rerum fugiat obcaecati? Possimus, sunt aut suscipit aliquam quaerat maxime minima quasi velit tempore, veritatis repellat?</div>
+       <div class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minus veritatis maxime, porro itaque rerum fugiat obcaecati? Possimus, sunt aut suscipit aliquam quaerat maxime minima quasi velit tempore, veritatis repellat?</div>
+       <div class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minus veritatis maxime, porro itaque rerum fugiat obcaecati? Possimus, sunt aut suscipit aliquam quaerat maxime minima quasi velit tempore, veritatis repellat?</div>
+       <div class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minus veritatis maxime, porro itaque rerum fugiat obcaecati? Possimus, sunt aut suscipit aliquam quaerat maxime minima quasi velit tempore, veritatis repellat?</div>
+       <div class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minus veritatis maxime, porro itaque rerum fugiat obcaecati? Possimus, sunt aut suscipit aliquam quaerat maxime minima quasi velit tempore, veritatis repellat?</div>
+       <div class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minus veritatis maxime, porro itaque rerum fugiat obcaecati? Possimus, sunt aut suscipit aliquam quaerat maxime minima quasi velit tempore, veritatis repellat?</div>
+       <div class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minus veritatis maxime, porro itaque rerum fugiat obcaecati? Possimus, sunt aut suscipit aliquam quaerat maxime minima quasi velit tempore, veritatis repellat?</div>
+       <div class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minus veritatis maxime, porro itaque rerum fugiat obcaecati? Possimus, sunt aut suscipit aliquam quaerat maxime minima quasi velit tempore, veritatis repellat?</div>
+       <div class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minus veritatis maxime, porro itaque rerum fugiat obcaecati? Possimus, sunt aut suscipit aliquam quaerat maxime minima quasi velit tempore, veritatis repellat?</div>
+       <div class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minus veritatis maxime, porro itaque rerum fugiat obcaecati? Possimus, sunt aut suscipit aliquam quaerat maxime minima quasi velit tempore, veritatis repellat?</div>
+   </main>
 
     <script type='text/javascript'>
-        const button = document.querySelector('button');
-        button.onclick = function() {
-            console.log('hello');
-            console.log('this',this);
-        }
+        window.addEventListener('scroll', function() {
+            const top = window.scrollY;
+            const main = document.querySelector('main')
+            const header = document.querySelector('header')
+            if (top > main.offsetTop + 100) {
+                header.style.opacity = 0;
+            } else {
+                header.style.opacity =1;
+            }
+        })
+
+        
     </script>
+
+    <style>
+        header {
+            background: peachpuff;
+            padding: 30px;
+            position: sticky;
+            top: 0;
+            transition: 1s;
+        }
+
+        .lorem {
+            font-size: 30px;
+        }
+    </style>
+
 </body>
 </html>
