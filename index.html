@@ -8,5 +8,14 @@
 </head>
 <body>
     <h1>VanillaJS SWAPI</h1>
+    <button>Click me</button>
+
+    <script type='text/javascript'>
+        const button = document.querySelector('button');
+        button.onclick = function() {
+            console.log('hello');
+            console.log('this',this);
+        }
+    </script>
 </body>
 </html>
